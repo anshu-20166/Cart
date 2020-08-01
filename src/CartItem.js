@@ -1,45 +1,12 @@
 import React from 'react';
-class CartItem extends React.Component{
-    increaseQuantity=()=>
-    {
-       // console.log("increase",this.state);
-        //setstate form one
-        // this.setState({
-        //     qty:this.state.qty+1
-        // });
-        //setstate form 2
-        this.setState((prevState)=>{
-            return{
-                qty:prevState.qty+1
-            }
-        })
-        
-    }
-    decreaseQuantity=()=>
-    {
-       // console.log("decrease",this.state);
-        //setstate form one
-        // this.setState({
-        //     qty:this.state.qty+1
-        // });
-        //setstate form 2
-        this.setState((prevState)=>{
-            return{
-                qty:prevState.qty-1
-            }
-        })
-    }
-  
-    render()
-    {
-        console.log('this.props',this.props);
-        const {price,title,qty}=this.props.product;
-        const{product,onIncreaseQuantity,onDecreaseQuantity,onDeleteProduct}=this.props;
-        return(
+const  CartItem = (props) => {
+    const {price,title,qty}=props.product;
+    const{product,onIncreaseQuantity,onDecreaseQuantity,onDeleteProduct}=props;
+    return(
             <div className="cart-item">
                 {/*{this.props.jsx}*/}
                 <div className="left-block">
-                 <img style={styles.image}/>
+                 <img style={styles.image} src={product.img}/>
                 </div>
                 <div className="right-block">
                     <div style={{fontSize:20}}>{title}</div>
@@ -68,8 +35,8 @@ class CartItem extends React.Component{
 
                 </div>
             </div>
-        )
-    }
+    )
+    
 }
 const styles={
     image:{
