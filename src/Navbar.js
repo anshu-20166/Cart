@@ -2,6 +2,7 @@ import React from 'react';
 const Navbar = (props) =>{
     return(
         <div style={styles.nav}>
+          <h2 style={{color:"yellow"}}>My WishList</h2>
           <div style={styles.cartIconContainer}>
              <img style={styles.cartIcon} src="https://image.flaticon.com/icons/svg/2121/2121815.svg" alt="cart-icon" />
              <span style={styles.cartCount}>{props.count}</span>
@@ -20,7 +21,7 @@ const styles = {
       height: 70,
       background: '#4267b2',
       display: 'flex',
-      justifyContent: 'flex-end',
+      justifyContent: 'space-between',
       alignItems: 'center'
     },
     cartIconContainer: {

@@ -4,7 +4,7 @@ const  CartItem = (props) => {
     const{product,onIncreaseQuantity,onDecreaseQuantity,onDeleteProduct}=props;
     return(
             <div className="cart-item">
-                {/*{this.props.jsx}*/}
+               
                 <div className="left-block">
                  <img style={styles.image} src={product.img}/>
                 </div>
